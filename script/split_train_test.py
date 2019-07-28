@@ -33,7 +33,7 @@ if __name__ == '__main__':
     data = pd.read_csv(ANNOTATION_FILE)
     labels = data.groupby("label")
     
-    trainAll, testAll = make_csv(data, RANDOM_SEED, SPLIT_RATE)
+    trainAll, testAll = train_test_split_df(data, RANDOM_SEED, SPLIT_RATE)
     
     trainAll.to_csv(TRAIN_FILE_PATH, index=False)
     testAll.to_csv(TEST_FILE_PATH, index=False)
