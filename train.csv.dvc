@@ -1,0 +1,21 @@
+md5: ddae9386ee161fa35282ea4bfef9f7f6
+cmd: python script/split_train_test.py
+wdir: .
+deps:
+- md5: 87c46f0402b54b960b294ef7791f7cf8
+  path: dataset/annotation.csv
+- md5: 826ea439f28fb04923de739af8c26b5d
+  path: script/split_train_test.py
+- md5: 4148f985d23adf54811d674f4d90fd82
+  path: script/config.py
+outs:
+- md5: 896389741ff20a2055acfe5c65893bf1
+  path: dataset/train.csv
+  cache: true
+  metric: false
+  persist: false
+- md5: 1ea600a9a7b720cd28fe99ff6d1c3e70
+  path: dataset/test.csv
+  cache: true
+  metric: false
+  persist: false
