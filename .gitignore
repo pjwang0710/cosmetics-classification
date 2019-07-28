@@ -4,3 +4,4 @@ dataset/cosmetics-category
 dataset/test.csv
 dataset/train.csv
 model
+script/__pycache__/
