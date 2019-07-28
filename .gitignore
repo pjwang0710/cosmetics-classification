@@ -1,0 +1,6 @@
+.ipynb_checkpoints
+dataset/cosmetics-all
+dataset/cosmetics-category
+dataset/test.csv
+dataset/train.csv
+model
