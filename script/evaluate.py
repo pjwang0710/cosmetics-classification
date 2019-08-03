@@ -154,7 +154,7 @@ def main():
     else:
         model = VGG16_model(numClasses=NUM_CLASSES).to(device)
     
-    accuracy = test(model, dataloadersTrain, dataloadersTest, optimizer, criterion, EPOCHS)
+    accuracy = test(model, dataloadersTest)
     with open(EVALUATE_FILE, "a+") as f:
         f.write("input size: {} \n".format(INPUT_SIZE))
         f.write("classes number: {} \n".format(NUM_CLASSES))
