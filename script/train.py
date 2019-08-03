@@ -201,7 +201,7 @@ def main():
     
     if USE_PRETRAINED:
         model = VGG16_pretrained_model(numClasses=NUM_CLASSES, featureExtract=True, usePretrained=True).to(device)
-        if LOAD_MODEL_PATH != "":
+        if os.path.exists(LOAD_MODEL_PATH): 
             model = torch.load(LOAD_MODEL_PATH).to(device)
     else:
         model = VGG16_model(numClasses=NUM_CLASSES).to(device)

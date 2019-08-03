@@ -145,12 +145,9 @@ def main():
     testDatasets = image_dataset(TEST_FILE_PATH, IMAGE_FOLDER, dataTransformsTest)
     dataloadersTest = torch.utils.data.DataLoader(testDatasets, batch_size=BATCH_SIZE, shuffle=False)
     
-    if USE_PRETRAINED:
-        model = VGG16_pretrained_model(numClasses=NUM_CLASSES, featureExtract=True, usePretrained=True).to(device)
-        if LOAD_MODEL_PATH != "":
-            model = torch.load(LOAD_MODEL_PATH).to(device)
-    else:
-        model = VGG16_model(numClasses=NUM_CLASSES).to(device)
+    if os.path.exists(LOAD_MODEL_PATH):
+        model = torch.load(LOAD_MODEL_PATH).to(device)
+    
     
     accuracy = test(model, dataloadersTest)
     with open(EVALUATE_FILE, "a+") as f:
