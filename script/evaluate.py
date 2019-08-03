@@ -40,11 +40,9 @@ def test(net, testLoader):
         x = x.to(device)
         label = label.to(device, dtype=torch.long)
         output = net(x)
-        loss = criterion(output, label)
         _, predicted = torch.max(output.data, 1)
         count += len(x)
         accuracy += (predicted == label).sum().item()
-        totalLoss += loss.item()*len(label)
     return (accuracy / count)
 
 
