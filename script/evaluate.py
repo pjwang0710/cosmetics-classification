@@ -103,6 +103,12 @@ class VGG16_model(nn.Module):
         return x
 
 
+def set_parameter_requires_grad(model, feature_extracting):
+    if feature_extracting:
+        for param in model.parameters():
+            param.requires_grad = False
+
+
 def VGG16_pretrained_model(numClasses, featureExtract=True, usePretrained=True):
     model = models.vgg16(pretrained=True)
     set_parameter_requires_grad(model, featureExtract)
