@@ -16,7 +16,7 @@ imageFolder = os.path.join(dataDir, "cosmetics-all")
 trainingPath = os.path.join(logDir, "train-output.txt")
 testingPath = os.path.join(logDir, "test-output.txt")
 saveModelPath = os.path.join(modelDir, "model.pth")
-loadModelPath = ""
+loadModelPath = os.path.join(modelDir, "model.pth")
 
 # parameters
 inputSize = 224
