@@ -17,6 +17,7 @@ trainingPath = os.path.join(logDir, "train-output.txt")
 testingPath = os.path.join(logDir, "test-output.txt")
 saveModelPath = os.path.join(modelDir, "model.pth")
 loadModelPath = os.path.join(modelDir, "model.pth")
+evaluateFile = os.path.join(logDir, "eval.txt")
 
 # parameters
 inputSize = 224
