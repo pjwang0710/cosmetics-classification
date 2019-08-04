@@ -1,9 +1,0 @@
-input size: 224 
-classes number: 7 
-use pretrained: True 
-epochs: 21 
-batch size: 32 
-learning rate: 0.001 
-momentum: 0.9 
-accuracy: 0.8661971830985915 
-
